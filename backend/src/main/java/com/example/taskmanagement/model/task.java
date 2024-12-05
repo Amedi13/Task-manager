@@ -6,88 +6,53 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class task {
+public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
     private String description;
     private String status;
     private String priority;
 
-    /**
-     * Set title
-     * @param title
-     */
-    public void setTitle(String title) {
-        this.title = title;
+    // Getters and Setters
+    public Long getId() {
+        return id;
     }
 
-    /**
-     * Get Title
-     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
 
-    /**
-     * Set Id
-     * @param id
-     */
-    public void setID(Long id) {
-        this.id = id;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    /**
-     * Get Id
-     */
-    public Long getID() {
-        return id;
-    }
-
-    /**
-     * Set Description.
-     * @param description
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * Get Description
-     */
     public String getDescription() {
         return description;
     }
 
-    /**
-     * Set Status
-     * @param status
-     */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    /**
-     * Get Status
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * Set Priority
-     * @param priority
-     */
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    /**
-     * Get Priority
-     */
     public String getPriority() {
         return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
     }
 }
